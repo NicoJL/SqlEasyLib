@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SqlEasyLib</id>
+    <version>1.0.0</version>
+    <authors>SqlEasyLib</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net5.0">
+        <dependency id="System.Data.SqlClient" version="4.8.5" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\njl27\source\repos\SqlEasyLib\bin\Release\net5.0\SqlEasyLib.dll" target="lib\net5.0\SqlEasyLib.dll" />
+  </files>
+</package>

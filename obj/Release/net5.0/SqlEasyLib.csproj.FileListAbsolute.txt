@@ -1,0 +1,12 @@
+C:\Users\njl27\source\repos\SqlEasyLib\bin\Release\net5.0\SqlEasyLib.deps.json
+C:\Users\njl27\source\repos\SqlEasyLib\bin\Release\net5.0\SqlEasyLib.dll
+C:\Users\njl27\source\repos\SqlEasyLib\bin\Release\net5.0\ref\SqlEasyLib.dll
+C:\Users\njl27\source\repos\SqlEasyLib\bin\Release\net5.0\SqlEasyLib.pdb
+C:\Users\njl27\source\repos\SqlEasyLib\obj\Release\net5.0\SqlEasyLib.csproj.AssemblyReference.cache
+C:\Users\njl27\source\repos\SqlEasyLib\obj\Release\net5.0\SqlEasyLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\njl27\source\repos\SqlEasyLib\obj\Release\net5.0\SqlEasyLib.AssemblyInfoInputs.cache
+C:\Users\njl27\source\repos\SqlEasyLib\obj\Release\net5.0\SqlEasyLib.AssemblyInfo.cs
+C:\Users\njl27\source\repos\SqlEasyLib\obj\Release\net5.0\SqlEasyLib.csproj.CoreCompileInputs.cache
+C:\Users\njl27\source\repos\SqlEasyLib\obj\Release\net5.0\SqlEasyLib.dll
+C:\Users\njl27\source\repos\SqlEasyLib\obj\Release\net5.0\ref\SqlEasyLib.dll
+C:\Users\njl27\source\repos\SqlEasyLib\obj\Release\net5.0\SqlEasyLib.pdb
