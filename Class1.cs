@@ -50,6 +50,40 @@ namespace SqlEasyLib
       return dt;
 		}
 
+    public static DataTable GetData(this SqlConnection connection, string query, ref SqlCommand command) {
+      DataTable dt = new DataTable();
+      try
+      {
+        //command = connection.CreateCommand();
+        command.CommandText = query;
+        SqlDataAdapter adapter = new SqlDataAdapter(command);
+        adapter.SelectCommand.CommandTimeout = 1200;
+        adapter.Fill(dt);
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine(e.Message);
+      }
+      return dt;
+		}
+
+    public static int InsertAndGetLastId(this SqlConnection connection, string query,SqlCommand command)
+    {
+      Int32 id = 0;
+      try
+      {
+        query = $"{query}; select cast(scope_identity() AS int)";
+        command.CommandText = query;
+        id = (Int32)command.ExecuteScalar();
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine(e.Message);
+      }
+
+      return (int)id;
+    }
+
     /// <summary>
     /// This function execute insert,update and delete operations
     /// </summary>
