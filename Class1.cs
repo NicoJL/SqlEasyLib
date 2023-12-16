@@ -50,7 +50,7 @@ namespace SqlEasyLib
       return dt;
 		}
 
-    public static DataTable GetData(this SqlConnection connection, string query, ref SqlCommand command) {
+    public static DataTable GetData(this SqlConnection connection, string query,SqlCommand command) {
       DataTable dt = new DataTable();
       try
       {
@@ -75,6 +75,35 @@ namespace SqlEasyLib
         query = $"{query}; select cast(scope_identity() AS int)";
         command.CommandText = query;
         id = (Int32)command.ExecuteScalar();
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine(e.Message);
+      }
+
+      return (int)id;
+    }
+
+    /// <summary>
+    /// Insert a new element and return his id.
+    /// </summary>
+    /// <param name="connection">connection name</param>
+    /// <param name="query">SQL Query</param>
+    /// <returns>id inserted</returns>
+    public static int InsertAndGetId(this SqlConnectionStringBuilder connection, string query)
+    {
+      Int32 id = 0;
+      try
+      {
+        using (SqlConnection con = new SqlConnection(connection.ConnectionString))
+        {
+          query = $"{query}; select cast(scope_identity() AS int)";
+          con.Open();
+          SqlCommand command = con.CreateCommand();
+          command.Connection = con;
+          command.CommandText = query;
+          id = (Int32)command.ExecuteScalar();
+        }
       }
       catch (Exception e)
       {
